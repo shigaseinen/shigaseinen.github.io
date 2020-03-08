@@ -159,15 +159,15 @@ p
     max-width: 100%;
     height: auto;
 }
-caption
+/* caption
 {
     font-size: 1.8rem;
     text-align: center;
     line-height: 2em;
-}
+} */
 .item
 {
-    width: 30%;
+    width: 45%;
     display: inline-block;
     margin-top: 2rem;
     filter: grayscale(100%);
@@ -573,7 +573,7 @@ caption
     }
     .mxw800p p
     {
-        font-size: 15px;
+        font-size: 13px;
     }
     .stats
     {

@@ -618,4 +618,8 @@ caption
     {
         font-size: 15px;
     }
+    .people .content p
+    {
+        font-size: 12px;
+    }
 }

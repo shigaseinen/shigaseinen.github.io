@@ -609,4 +609,13 @@ caption
     {
         font-size: 30px;
     }
+    .polaroid img
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .contact .content p
+    {
+        font-size: 15px;
+    }
 }

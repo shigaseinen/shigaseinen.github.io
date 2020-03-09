@@ -24,24 +24,26 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 100px;
+    padding: 10px 100px;
     z-index: 1000;
     transition: 0.6s;
+    background-color: rgba(0,0,0,.3);
 }
 header.sticky
 {
     padding: 5px 100px;
     background: #fff;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.3);
+    /* border-bottom: 1px solid rgba(0,0,0,.1); */
 }
 header .logo
 {
     position: relative;
     font-weight: 700;
-    color: #fff;
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
     font-size: 2em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 2px;
     transition: 0.6s;
 }
@@ -67,11 +69,15 @@ header ul li a
     font-weight: 300;
     transition: 0.6s;
 }
-header.sticky .logo,
-header.sticky ul li a
+header ul li a:hover
+{
+    color: orange;
+}
+/* header.sticky .logo, */
+/* header.sticky ul li a
 {
     color: #000;
-}
+} */
 .banner
 {
     position: relative;
@@ -88,7 +94,7 @@ header.sticky ul li a
     color: #fff;
     font-size: 90px;
     text-transform: uppercase;
-    margin-bottom: 400px;
+    margin-bottom: 300px;
     text-align: center;
     line-height: 1em;
 }
@@ -167,7 +173,7 @@ p
 } */
 .item
 {
-    width: 45%;
+    width: 30%;
     display: inline-block;
     margin-top: 2rem;
     filter: grayscale(100%);
@@ -272,43 +278,6 @@ p
 {
     background: #fff;
 }
-/* .workBx
-{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
-    max-width: 100%;
-    margin-top: 40px;
-}
-.workBx .brand
-{
-    position: relative;
-    background: #4978ff;
-    min-height: 300px;
-    width: 250px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.workBx .brand:hover
-{
-    background: #000;
-}
-.workBx .brand a
-{
-    text-decoration: none;
-    color: rgba(255,255,255,0.4);
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-.workBx .brand:hover a
-{
-    color: rgba(255,255,255,1);
-} */
 .teamBx
 {
     position: relative;
@@ -437,15 +406,33 @@ p
 {
     color: rgba(255,255,255,0.5);
 }
-.contactForm .row100 input[type="submit"]
+.contactForm .row100 .btn
 {
-    background: #fff;
-    color: #000;
-    max-width: 100px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+.contactForm .row100 .btn a
+{
+    position: relative;
+    margin: 20px 0;
+    color: #03e9f4;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+.contactForm .row100 .btn a:hover
+{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
 }
 .sci
 {
@@ -486,7 +473,7 @@ p
 {
     display: none;
 }
-@media (max-width: 992px)
+@media (max-width: 736px)
 {
     .toggle
     {
@@ -503,9 +490,9 @@ p
         top: 4px;
         width: 100%;
         height: 2px;
-        background: #000;
+        background: #fff;
         z-index: 1;
-        box-shadow: 0 10px 0 #000;
+        box-shadow: 0 10px 0 #fff;
         transition: 0.5s;
     }
     .toggle:after
@@ -515,7 +502,7 @@ p
         bottom: 4px;
         width: 100%;
         height: 2px;
-        background: #000;
+        background: #fff;
         z-index: 1;
         transition: 0.5s;
     }
@@ -524,6 +511,7 @@ p
     {
         padding: 5px 50px;
         background: #fff;
+        background-color: rgba(0,0,0,.7);
     }
     header ul
     {
@@ -534,14 +522,14 @@ p
         height: 100vh;
         text-align: center;
         overflow: auto;
-        background: #fff;
+        background: #000;
         visibility: hidden;
         opacity: 0;
     }
     header.active ul
     {
         visibility: visible;
-        opacity: 1;
+        opacity: 0.9;
         display: block;
         padding-top: 20px;
     }
@@ -550,11 +538,16 @@ p
         display: inline-block;
         margin: 10px 0;
         font-size: 20px;
+        color: white;
+    }
+    header.active ul li a:hover
+    {
+        color: orange;
     }
     header .logo,
     header ul li a
     {
-        color: blue;
+        color: white;
         font-weight: 600;
     }
     .banner
@@ -571,6 +564,14 @@ p
     {
         padding: 100px 50px 50px 50px;
     }
+    .sec .content h3
+    {
+        font-size: 30px;
+    }
+    .mxw800p h3
+    {
+        font-size: 45px;
+    }
     .mxw800p p
     {
         font-size: 13px;
@@ -586,6 +587,13 @@ p
     .stats img
     {
         width: 100%;
+    }
+    .item
+    {
+        width: 80%;
+        display: inline-block;
+        margin-top: 2rem;
+        filter: grayscale(100%);
     }
     .row100
     {
@@ -617,6 +625,10 @@ p
     .contact .content p
     {
         font-size: 15px;
+    }
+    .people .content h3
+    {
+        font-size: 45px;
     }
     .people .content p
     {

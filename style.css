@@ -473,7 +473,7 @@ p
 {
     display: none;
 }
-@media (max-width: 736px)
+@media (max-width: 992px)
 {
     .toggle
     {
